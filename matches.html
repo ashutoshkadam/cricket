@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Matches| Champions Cup</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            * {box-sizing: border-box}
+            body {font-family: "Lato", sans-serif;}
+
+            /* Style the tab */
+            .tab {
+            float: left;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 30%;
+            height: 300px;
+            }
+
+            /* Style the buttons inside the tab */
+            .tab button {
+            display: block;
+            background-color: inherit;
+            color: black;
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 17px;
+            }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+            background-color: #ddd;
+            }
+
+            /* Create an active/current "tab button" class */
+            .tab button.active {
+            background-color: #ccc;
+            }
+
+            /* Style the tab content */
+            .tabcontent {
+            float: left;
+            padding: 0px 12px;
+            border: 1px solid #ccc;
+            width: 70%;
+            border-left: none;
+            height: 300px;
+            }
+        </style>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+						<h1><a href="index.html" id="logo">🏆CHAMPIONS CUP🏆- <em>where quality faces itself.</em></a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>
+									<a href="countries.html">Countries</a>
+								</li>
+								<li><a>Teams</a>
+								<ul>
+										<li><a href="mi.html">Mumbai Indians</a></li>
+										<li><a href="csk.html">Chennai Super Kings</a></li>
+										<li><a href="cc.html">Cape Cobras</a></li>
+										<li><a href="dd.html">Durban Dolphins</a></li>
+										<li><a href="lf.html">Leistershire Foxes</a></li>
+										<li><a href="ps.html">Perth Scorchers</a></li>
+										<li><a href="sds.html">Sydney Sixers</a></li>
+										<li><a href="ss.html">Sussex Sharks</a></li>
+									</ul>
+								</li>
+								<li><a href="players.html">Players</a>
+								<ul>
+										<li><a href="batsmen.html">Batsmen</a></li>
+										<li><a href="bowlers.html">Bowlers</a></li>
+										<li><a href="allrounders.html">Allrounders</a></li>
+										<li><a href="keepers.html">Wicketkeepers</a></li>
+									</ul>
+								</li>
+								<li><a href="venues.html">Venues</a></li>
+								<li  class="current"><a href="matches.html">Matches</a></li>
+								<li><a href="results.html">Results</a></li>
+								<li><a href="pointtable.html">Points Table</a></li>
+							</ul>
+						</nav>
+
+				</div>
+                
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'match1')" id="defaultOpen">Match 1: MUMBAI VS CAPETOWN</button>
+                        <button class="tablinks" onclick="openCity(event, 'match2')">Match 2: CHENNAI VS LEISTER</button>
+                        <button class="tablinks" onclick="openCity(event, 'match3')">Match 3: SYDNEY VS SUSSEX</button>
+                    </div>
+
+                    <div id="match1" class="tabcontent">
+                        <h4>Match No. 1</h4>
+                        <p> Venue: Wankhede<br>
+                        Teams:<br>
+                        Mumbai: Player1, player2, player3<br>
+                        Capetown: Player4, Player5, Player6<br>
+                        Winner:Mumbai<br>
+                        Man of the Match: J Bumrah<br>
+                        </p>
+                    </div>
+
+                    <div id="match2" class="tabcontent">
+                        <h4>Match No. 2</h4>
+                        <p> Venue: Chepauk<br>
+                        Teams:<br>
+                        Chennai: Player1, player2, player3<br>
+                        Leicster: Player4, Player5, Player6<br>
+                        Winner:Chennai<br>
+                        Man of the Match: MS Dhoni<br>
+                        </p> 
+                    </div>
+
+                    <div id="match3" class="tabcontent">
+                        <h4>Match No. 3</h4>
+                        <p> Venue: Sydney<br>
+                        Teams:<br>
+                        Sydney: Player1, player2, player3<br>
+                        Sussex: Player4, Player5, Player6<br>
+                        Winner:Sydney<br>
+                        Man of the Match: M Starc<br>
+                        </p>
+                    </div>
+
+                    <script>
+                        function openCity(evt, cityName) {
+                        var i, tabcontent, tablinks;
+                        tabcontent = document.getElementsByClassName("tabcontent");
+                        for (i = 0; i < tabcontent.length; i++) {
+                            tabcontent[i].style.display = "none";
+                        }
+                        tablinks = document.getElementsByClassName("tablinks");
+                        for (i = 0; i < tablinks.length; i++) {
+                            tablinks[i].className = tablinks[i].className.replace(" active", "");
+                        }
+                        document.getElementById(cityName).style.display = "block";
+                        evt.currentTarget.className += " active";
+                        }
+
+                        // Get the element with id="defaultOpen" and click on it
+                        document.getElementById("defaultOpen").click();
+                    </script>
+                    
+    </body>
+</html>
